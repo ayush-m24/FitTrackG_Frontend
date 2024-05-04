@@ -81,7 +81,7 @@ console.log(pathname)
 
       }
 
-      else if (pathname.includes('Sleep')) {
+      else if (pathname?.includes('Sleep')) {
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/sleeptrack/getsleepbylimit`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -116,7 +116,7 @@ console.log(pathname)
         });
       }
 
-      else if (pathname.includes('Steps')) {
+      else if (pathname?.includes('Steps')) {
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/steptrack/getstepsbylimit`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -152,7 +152,7 @@ console.log(pathname)
       }
 
 
-      else if (pathname.includes('Water')) {
+      else if (pathname?.includes('Water')) {
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/watertrack/getwaterbylimit`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -187,7 +187,7 @@ console.log(pathname)
         });
       }
       
-      else if (pathname.includes('Workout')) {
+      else if (pathname?.includes('Workout')) {
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/workouttrack/getworkoutbylimit`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -321,7 +321,7 @@ console.log(pathname)
                   else if (pathname == '/report/Water') {
                     setShowWaterTrackPopup(true);
                   }
-                  else if (pathname.includes('Workout')) {
+                  else if (pathname?.includes('Workout')) {
                     setShowWorkoutTrackPopup(true); 
                   }
                   
