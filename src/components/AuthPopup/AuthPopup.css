@@ -1,0 +1,148 @@
+.popup {
+    position: fixed;
+    top: 0;
+    /*left: 0;*/
+    width: 100vh;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+   /* background-color: rgba(0, 0, 0, 0.753); */
+    background-color: transparent; 
+    overflow-y: auto;
+    z-index: 10; /* Ensure the popup is above other content */
+}
+
+.authform{
+    display: flex;
+    /* align-items: center; */
+    background-color: rgb(151, 149, 149);
+    /*width: 100vh; */
+    /* max-width: 800px; /* Adjust max-width to fit your design */
+   /* min-width: 300px; /* Minimum width for smaller screens */
+    width: 90vh; /* Adjust width to provide padding from the viewport edges */
+    max-width: 500px; /* You can set a max-width that suits your design */
+   /* margin: 2vh auto;  Add vertical margin */
+    max-height: 80vh;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.354);
+    /*min-height: 50%;*/
+    justify-content: space-between; /* This will place an equal amount of space between each child */
+    flex-wrap: nowrap; /* Prevents the items from wrapping onto multiple lines */
+}
+
+.authform .left{
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* flex: 1 1 auto; /* Adds flexibility to sizing */
+   flex-basis: 0; /* Sets the default size of an element before the remaining space is distributed */
+   flex-grow: 1; /* Allows both sides to grow and fill the parent container equally */
+  /* box-sizing: border-box; */
+}
+
+.authform .left img{
+    width: 200%;
+    height: 200%;
+    object-fit: contain;
+}
+
+.authform .right{
+    /* background-color: var(--col1); */
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid var(--col1);
+    padding: 20px;
+    overflow: scroll;
+   /* flex: 1 1 auto; /* Adds flexibility to sizing */
+   flex-basis: 0; /* Sets the default size of an element before the remaining space is distributed */
+   flex-grow: 1; /* Allows both sides to grow and fill the parent container equally */
+   /* box-sizing: border-box; */
+}
+
+.authform .right h1{
+    color: var(--col1);
+    font-size: clamp(16px, 2.5vw, 20px); /* Adjusts size based on the viewport width */
+    font-weight: 300;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.authform .right form{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.authform p{
+    margin: 10px 0px;
+    font-weight: 400;
+}
+
+.authform .form_input_leftright{
+    display: flex;
+    gap: 10px;
+}
+
+.popup .close{
+    position: fixed;
+    top: 32px; 
+    right: 10px; 
+    border-radius: 50%;
+    line-height: 0;
+    cursor: pointer;
+}
+
+/* @media (max-width: 768px) {
+    .authform {
+        flex-direction: column;
+    }
+    .authform .left, .authform .right {
+        width: 100%; /* Full width when stacked vertically 
+    }
+
+    .popup .close {
+        top: 10px; 
+        right: 10px;
+        font-size: 24px;  Larger close button for easier interaction 
+    }
+}
+ */
+
+@media (max-width: 768px) {
+
+    .popup {
+        height: 90vh;
+        top: 0;
+        overflow-y: auto;
+    }
+
+    .authform {
+        width: 100vw; /* Make authform full width on small screens */
+        max-height: 90vh; /* Remove max-height restriction */
+        height: auto; /* Let the height be determined by content */
+        border-radius: 0; /* Optional: Remove border radius for a full-screen look */
+        margin-top: 0; /* Remove any margin from the top */
+        overflow-y: auto; /* Hide overflow */
+        flex-direction: column;
+    }
+    .authform .left, .authform .right {
+        width: 100%; /* Full width when stacked vertically */
+        flex-basis: auto; /* Adjust flex basis for stacking */
+    }
+    /* Adjust padding and sizing for smaller screens */
+    .authform .right {
+        padding: 10px;
+    }
+    .authform .right h1 {
+        font-size: 5vw; /* Make font size responsive */
+    }
+    .popup .close {
+        top: 10px; 
+        right: 10px;
+        font-size: 24px; /* Larger close button for easier interaction */
+    }
+}

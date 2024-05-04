@@ -1,0 +1,117 @@
+.workout {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: rgb(244, 241, 241);
+    text-align: center;
+}
+
+.workout__exercises{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.workout__exercise {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* For the odd indedx reversed*/ 
+.workout__exercise--reverse { 
+    flex-direction: row-reverse;
+}
+
+.workout__exercise__image img {
+    max-width: 100%;
+    height: auto;
+    min-width: 300px;
+    padding-left: 3%;
+    padding-right: 5%;
+}
+
+.workout__exercise__content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.workout__exercise--reverse .workout__exercise__content {
+    text-align: right;
+    align-items: flex-end;
+    
+}
+
+.workout__exercise__content h2 {
+    /*font-size: 50px;*/
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    font-weight: 900;
+    -webkit-text-stroke: 1px #333;
+    color: transparent;
+
+}
+
+.workout__exercise__content span{
+    /*font-size: 20px;*/
+    font-size: 2vw; /* Responsive font size based on viewport width */
+    font-weight: 300;
+    color: #ffffff;
+    background-color: var(--col1);
+    /*padding: 5px 20px;*/
+    padding: 1vw 4vw; /* Responsive padding based on viewport width */
+    border-radius: 35px;
+    width: fit-content;
+}
+
+.workout__exercise__content p {
+    /*font-size: 20px;*/
+    font-size: 2vw; /* Responsive font size based on viewport width */
+    font-weight: 300;
+    color: var(--col1);
+}
+
+.workout__exercises h3{
+    -webkit-text-stroke: 1px var(--col1);
+    color: transparent;
+    /*font-size: 10rem;*/
+    font-size: 6vw; /* Responsive font size based on viewport width */
+    font-weight: 900;
+    text-align: center;
+    border: 1px solid var(--col1);
+    /*width: 15rem;*/
+    width: 15vw; /* Responsive width based on viewport width */
+    aspect-ratio: 2 / 1;
+    border-radius: 80%;
+}
+
+.workout__exercise--reverse .workout__exercise__image img {
+    padding-right: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .workout__exercise {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: flex-start; /* Align items to start on smaller screens */
+    }
+
+    .workout__exercise--reverse .workout__exercise__content {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .workout__exercise__content {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+
+    .workout__exercise__image img {
+        min-width: 100%; /* Adjust minimum width of images for smaller screens */
+        padding-top: 3%;
+    }
+}

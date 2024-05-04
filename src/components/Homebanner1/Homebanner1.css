@@ -1,0 +1,140 @@
+.meters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.meters .card{
+    width: 250px;
+    height: 300px;
+   /* max-width: clamp(150px, 1fr, 250px); */
+    flex: 1 1 auto; /* Allows the card to grow and shrink */
+    /* background-color: white; */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.meters .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+ /* ech of the cards will have a diiferent color */
+.meters .card:nth-child(1) {
+    background: linear-gradient(90deg,  #ffe38d 0%, #ffb784 100%);
+}
+.meters .card:nth-child(2) {
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.meters .card:nth-child(3) {
+    background: linear-gradient(90deg,#a8e063 0%, #56ab2f 100%);
+}
+
+.meters .card:nth-child(4) {
+    background: linear-gradient(90deg, #77ffd2 0%, #6297db 100%);
+}
+
+.meters .card:nth-child(5) {
+    background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+/*.meters .card:nth-child(6) {
+    background: linear-gradient(90deg, #cae8ff 0%, #a3bded 100%);
+} */
+
+.meters .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.meters .card-header-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 49%;
+    background-color: rgb(241, 238, 238);
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.meters .card-header-box-name {
+    font-size: clamp(10px, 2.5vw, 12px);
+    font-weight: bold;
+}
+
+.meters .card-header-box-value {
+    font-size: clamp(12px, 3vw, 14px);
+    color: #333;
+}
+
+.meters .card button{
+    background-color: #ffffff;
+    color: rgb(33, 33, 33);
+    border: none;
+    border-radius: 15px;
+    padding: clamp(5px, 2vw, 10px);
+    font-size: clamp(12px, 2.5vw, 14px);
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.meters .card button:hover{
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+
+.meters .textincircle{
+    color: #111010;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.meters .textincircle .hrline {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin-top: 1px 0;
+}
+
+@media (max-width: 768px) {
+    .meters .card {
+        max-width: clamp(120px, 50vw, 200px);
+        aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+        max-height: 300px; /* Control the maximum height */
+    }
+}
+
+@media (max-width: 480px) {
+    .meters .card {
+        max-width: clamp(100px, 80vw, 180px);
+        aspect-ratio: 1 / 1;
+        max-height: 180px;
+    }
+}
+
+
