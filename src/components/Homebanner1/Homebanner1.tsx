@@ -2,7 +2,7 @@
 import React from 'react'
 import CircularProgress from '@mui/joy/CircularProgress';
 import { AiOutlineEye } from 'react-icons/ai'
-import './HomeBanner1.css'
+import './Homebanner1.css'
 
 
 const Homebanner1 = () => {
