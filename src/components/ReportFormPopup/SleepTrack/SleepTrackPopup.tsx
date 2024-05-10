@@ -100,7 +100,7 @@ const SleepTrackPopup: React.FC<SleepTrackPopupProps> = ({ setShowSleepTrackPopu
 
   useEffect(() => {
     fetchSleepData(); // Initial data fetch
-  }, []);
+  }, [date]);
 
   return (
     <div className='popupout'>

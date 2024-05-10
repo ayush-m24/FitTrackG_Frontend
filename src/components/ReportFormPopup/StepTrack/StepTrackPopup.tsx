@@ -75,7 +75,7 @@ const StepTrackPopup: React.FC<StepTrackPopupProps> = ({ setShowStepTrackPopup }
 
   useEffect(() => {
     fetchStepData(); // Initial data fetch
-  }, []);
+  }, [date]);
 
   const selectedDay = (val: any) => {
     setDate(val)
